@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DiscordFloater
+namespace Awtop
 {
     internal static class Program
     {
@@ -32,7 +32,7 @@ namespace DiscordFloater
 
         public WindowPinningForm()
         {
-            Text = "Fijar ventana";
+            Text = "Awtop";
             Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             ShowInTaskbar = true;
             FormBorderStyle = FormBorderStyle.FixedDialog;

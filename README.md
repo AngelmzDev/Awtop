@@ -1,28 +1,46 @@
-# Fijar ventana
+# Awtop
 
-Aplicación sencilla para Windows que permite elegir una ventana abierta y mantenerla siempre en primer plano.
+<p align="center">
+  <img src="awtop-hero.png" alt="Un león sobre una roca junto a una ventana fijada" width="100%">
+</p>
+
+<p align="center"><strong>Elige una ventana. Mantenla arriba.</strong></p>
+
+Awtop es una utilidad pequeña para Windows que coloca una ventana elegida por encima de las demás. Es útil para seguir un vídeo, una llamada, un panel de referencias o Discord mientras trabajas en otra aplicación.
+
+## Qué hace
+
+- Muestra las ventanas abiertas en una lista.
+- Fija la ventana que elijas en primer plano.
+- Mantiene su tamaño y posición.
+- Permite retirar la prioridad con un clic.
 
 ## Uso
 
-1. Abre `DiscordFloater-v2.exe`.
-2. Pulsa **Actualizar** y elige una ventana de la lista.
-3. Pulsa **Fijar seleccionada**.
-4. Para revertirlo, pulsa **Quitar prioridad**.
-
-El icono está en `DiscordFloater.ico`, generado a partir de `DiscordFloater-icon.png`.
+1. Descarga o compila `Awtop.exe`.
+2. Abre Awtop y pulsa **Actualizar**.
+3. Elige la ventana que quieres mantener visible.
+4. Pulsa **Fijar seleccionada**.
+5. Cuando termines, pulsa **Quitar prioridad**.
 
 ## Compilar
 
-Con .NET SDK 8 en Windows:
+Con .NET SDK 8 para Windows:
 
 ```powershell
-dotnet build .\DiscordFloater.csproj -c Release
+dotnet build .\Awtop.csproj -c Release
 ```
 
 Con el compilador de .NET Framework incluido en Windows:
 
 ```powershell
-& "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /win32icon:DiscordFloater.ico /out:DiscordFloater-v2.exe /r:System.Windows.Forms.dll /r:System.Drawing.dll DiscordFloater.Legacy.cs
+& "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /win32icon:Awtop.ico /out:Awtop.exe /r:System.Windows.Forms.dll /r:System.Drawing.dll Awtop.cs
 ```
 
-Para reconstruir el `.ico` desde el PNG, ejecuta `Build-Icon.ps1` con `-SourcePng` y `-DestinationIco`.
+## Archivos visuales
+
+- `Awtop.ico`: icono de Windows.
+- `Awtop-icon.png`: versión en PNG del icono.
+- `awtop-hero.png`: portada original del repositorio.
+
+Para reconstruir el icono desde el PNG, usa `Build-Icon.ps1` con `-SourcePng` y `-DestinationIco`.
