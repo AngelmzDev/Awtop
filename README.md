@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/branding/logo.svg" alt="Logo de Awtop" width="128" height="128">
+</p>
+
 # Awtop
 
 <p align="center">
